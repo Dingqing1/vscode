@@ -396,7 +396,7 @@ setting
 ```
 ### 中文乱码
 #### 方法1，语言设置 utf8-beta(其他软件solidworks，警告了一下，但能用)
-#### 方法2, cmd,powershell 均修改为65001
+#### 方法2, cmd,powershell 均修改为65001（UTF-8）
 
 ##### 1. poweshell(以管理员模式运行)
 ```
