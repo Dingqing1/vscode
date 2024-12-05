@@ -402,11 +402,19 @@ setting
 ```
  $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = [System.Text.Encoding]::GetEncoding(65001);
 ```
-##### 2. cmd设置编码为 utf-8
+##### 2. cmd设置编码为 utf-8(在VScode 默认终端可以，但若调试时是弹出窗口则方法3）
 ```
 
 1、在运行中输入 regedit 找到 
 HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Command Processor
-2、右键--->>> 新建--->>>选择字符串值选项 --->>> “名称”列填写“autorun”, 数值数据填写“chcp 65001” (注意有空格)
+2、右键--->>> 新建--->>>选择字符串值选项 --->>> “名称”列填写“autorun”, 数值数据填写“chcp 65001 > nul” (注意有空格,1个l)
 3、重新打开 cmd 运行输入 chcp 查看当前的编码是否是 65001
 ```
+##### 3. 修改vscode默认的编码格式
+```
+1. 由cmd 输入chcp 得到编码格式936 经查得GB2312
+2. 设置搜索 Files: Encoding 修改为GB2312
+3. 对于已经写的代码点击vscode 底端的UTF-8，弹出的选项选通过编码保存,选择GB2312
+
+```
+
