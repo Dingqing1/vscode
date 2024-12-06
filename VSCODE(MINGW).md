@@ -20,7 +20,7 @@ tasks
 
                 "args": [
 
-                    "-fdiagnostics-color=always",
+                    "-fdiagnostics-color=always",8
 
                     "-g",
 
@@ -417,7 +417,9 @@ $PROFILE
 C:\\Users\\Yuanfei\\Documents\\PowerShell\\Microsoft.PowerShell_profile.ps1
 ```
 使用编辑器打开，加入一行：
-```$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+```
+$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+
 ```
 然后重启powershell
 
