@@ -400,8 +400,28 @@ setting
 
 ##### 1. poweshell(以管理员模式运行)
 ```
- $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = [System.Text.Encoding]::GetEncoding(65001);
+ #允许运行自定义脚本
+set-executionpolicy remotesigned
+
+#创建默认profile，如果存在则不创建
+if (!(Test-Path -Path $PROFILE)) {
+  New-Item -ItemType File -Path $PROFILE -Force
+}
+
+#查看创建的profile文件位置
+$PROFILE
+
 ```
+根据输出的位置，找到profile文件，
+```
+C:\\Users\\Yuanfei\\Documents\\PowerShell\\Microsoft.PowerShell_profile.ps1
+```
+使用编辑器打开，加入一行：
+```$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+```
+然后重启powershell
+
+
 ##### 2. cmd设置编码为 utf-8(在VScode 默认终端可以，但若调试时是弹出窗口则方法3）
 ```
 
