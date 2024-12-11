@@ -439,4 +439,14 @@ HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Command Processor
 3. 对于已经写的代码点击vscode 底端的UTF-8，弹出的选项选通过编码保存,选择GB2312
 
 ```
+### 运行框太难看
+1. Microsoft store下载终端集成powershell
+2. (不需要不用看)默认终端换成cmder下载后，配置到vscode在另一个setting的中添加(配置能搜到)
+```
+代填
+```
+3. 搜索终端设置，(默认为让windows决定)更改为终端
+决定
+
+
 
