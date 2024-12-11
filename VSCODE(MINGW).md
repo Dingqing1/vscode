@@ -443,7 +443,22 @@ HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Command Processor
 1. Microsoft store下载终端集成powershell
 2. (不需要不用看)默认终端换成cmder下载后，配置到vscode在另一个setting的中添加(配置能搜到)
 ```
-代填
+"Cmder": {
+            "overrideName": true,
+            "path": [
+              "${env:windir}\\Sysnative\\cmd.exe",
+              "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [
+              "/k",
+              "D:\\Enviroment\\cmder\\vendor\\init.bat" //这里要改成你的cmder安装的根路径\\vendor\init.bat
+            ],
+            "icon": "terminal-cmd"
+          }
+```
+以及
+```
+ "terminal.integrated.defaultProfile.windows": "Cmder",
 ```
 3. 搜索终端设置，(默认为让windows决定)更改为终端
 决定
