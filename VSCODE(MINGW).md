@@ -396,7 +396,7 @@ setting
 ```
 ### 中文乱码
 #### 方法1，语言设置 utf8-beta(其他软件solidworks，警告了一下，但能用)
-#### 方法2, cmd,powershell 均修改为65001（UTF-8）
+#### 方法2, cmd,powershell 均修改为65001（UTF-8）$$(网上搜到的，但是我的不行，有兴趣可以试试)$$
 
 ##### 1. poweshell(以管理员模式运行)
 ```
@@ -424,16 +424,16 @@ $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Obj
 然后重启powershell
 
 
-#####~~ 2. cmd设置编码为 utf-8(在VScode 默认终端可以，但若调试时是弹出窗口则方法3）
+##### 2. cmd设置编码为 utf-8(在VScode 默认终端可以，但若调试时是弹出窗口则方法3）
 
 ```
 
 1、在运行中输入 regedit 找到 
 HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Command Processor
 2、右键--->>> 新建--->>>选择字符串值选项 --->>> “名称”列填写“autorun”, 数值数据填写“chcp 65001 > nul” (注意有空格,1个l)
-3、重新打开 cmd 运行输入 chcp 查看当前的编码是否是 65001~~
+3、重新打开 cmd 运行输入 chcp 查看当前的编码是否是 65001
 ```
-##### 3. 修改vscode默认的编码格式
+##### 方法3. 修改vscode默认的编码格式
 ```
 1. 由cmd 输入chcp 得到编码格式936 经查得GB2312
 2. 设置搜索 Files: Encoding 修改为GB2312
