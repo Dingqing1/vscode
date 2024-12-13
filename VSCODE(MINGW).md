@@ -424,13 +424,14 @@ $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Obj
 然后重启powershell
 
 
-##### 2. cmd设置编码为 utf-8(在VScode 默认终端可以，但若调试时是弹出窗口则方法3）
+#####~~ 2. cmd设置编码为 utf-8(在VScode 默认终端可以，但若调试时是弹出窗口则方法3）
+
 ```
 
 1、在运行中输入 regedit 找到 
 HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Command Processor
 2、右键--->>> 新建--->>>选择字符串值选项 --->>> “名称”列填写“autorun”, 数值数据填写“chcp 65001 > nul” (注意有空格,1个l)
-3、重新打开 cmd 运行输入 chcp 查看当前的编码是否是 65001
+3、重新打开 cmd 运行输入 chcp 查看当前的编码是否是 65001~~
 ```
 ##### 3. 修改vscode默认的编码格式
 ```
